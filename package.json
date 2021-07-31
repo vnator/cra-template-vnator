@@ -25,7 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:ts": "npx eslint -c .eslintrc --ignore-path .eslintignore '**/*.{ts,tsx}' --quiet"
+    "lint:css": "npx stylelint src/**/*.css",
+    "lint:ts": "npx eslint -c .eslintrc --ignore-path .eslintignore '**/*.{ts,tsx}' --quiet",
+    "lint:ts:fix": "npx eslint -c .eslintrc --ext .ts --ext .tsx --ignore-path .eslintignore --fix '**/*.{ts,tsx}' --quiet"
   },
   "eslintConfig": {
     "extends": [

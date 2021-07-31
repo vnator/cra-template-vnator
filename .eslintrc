@@ -49,6 +49,7 @@
         "max-len": ["warn", { "code": 80 }]
     },
     "extends": [
+        "@lego/stylelint-config-prettier",
         "prettier",
         "plugin:react/recommended",
         "eslint:recommended",

@@ -1,21 +1,26 @@
-import { LANG } from "../constants/locale";
+import { LANG, CURRENCY } from '../constants/locale';
 
 export interface PolifillStruct {
   hasPolifill: boolean;
   paths: string[];
 }
 
-export type IntlMessage = { [key: string]: string | IntlMessage } | {}
+export type IntlMessage = { [key: string]: string | IntlMessage } | unknown;
+
+export interface LocaleSelected {
+  lang: LANG;
+  currency: CURRENCY;
+}
 
 export interface IntlParsedMessage {
-  [key: string]: string,
+  [key: string]: string;
 }
 
 export interface ParseMessage {
-  (nestedMessages: IntlMessage, prefix?: string): IntlParsedMessage
+  (nestedMessages: IntlMessage, prefix?: string): IntlParsedMessage;
 }
 
 export interface ApplicationMessages {
-  [LANG.EN]: IntlParsedMessage,
-  [LANG.PT]: IntlParsedMessage,
+  [LANG.EN]: IntlParsedMessage;
+  [LANG.PT]: IntlParsedMessage;
 }

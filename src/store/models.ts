@@ -1,8 +1,7 @@
-import { CreateSliceOptions } from "@reduxjs/toolkit";
+import { CreateSliceOptions } from '@reduxjs/toolkit';
 
-export type StoreNames = 
-  'counter';
+export type StoreNames = 'counter';
 
-export interface CustomCreateSlice<T> {
-  (name: StoreNames): CreateSliceOptions
+export interface CustomCreateSlice {
+  (name: StoreNames): CreateSliceOptions;
 }

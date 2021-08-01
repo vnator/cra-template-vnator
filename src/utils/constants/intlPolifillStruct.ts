@@ -62,9 +62,9 @@ export const polifilStructList: PolifillStruct[] = [
       '@formatjs/intl-relativetimeformat/locale-data',
     ],
   },
-]
+];
 
 export const langPath = {
   [LANG.EN]: 'en',
   [LANG.PT]: 'pt',
-}
+};

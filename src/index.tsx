@@ -1,7 +1,7 @@
 import React from 'react';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
-import { createIntl } from "react-intl";
+import { createIntl, RawIntlProvider } from 'react-intl';
 
 import './index.css';
 import App from './App';
@@ -13,19 +13,20 @@ import { applicationMessages } from './config/messages';
 
 const { lang } = selectLocale();
 
-applyIntlPolyfill(lang)
-  .catch(e => console.error(e));
+applyIntlPolyfill(lang).catch((e) => console.error(e));
 
-  const intl = createIntl({
-    locale: lang,
-    messages: parseMessages(applicationMessages[lang]),
-  });
+const intl = createIntl({
+  locale: lang,
+  messages: parseMessages(applicationMessages[lang]),
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <RawIntlProvider value={intl}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </RawIntlProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

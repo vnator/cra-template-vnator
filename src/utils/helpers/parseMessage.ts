@@ -1,7 +1,7 @@
 import { ParseMessage } from './../models/intlModels';
 import { parse } from '@formatjs/icu-messageformat-parser';
 
-export const parseMessages: ParseMessage = (nestedMessages, prefix = '') => 
+export const parseMessages: ParseMessage = (nestedMessages, prefix = '') =>
   nestedMessages instanceof Object
     ? Object.entries(nestedMessages).reduce((prev, cur) => {
         const [key, value] = cur;

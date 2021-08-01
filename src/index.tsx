@@ -1,12 +1,31 @@
 import React from 'react';
+import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom';
+import { createIntl } from "react-intl";
+
 import './index.css';
 import App from './App';
+import { store } from './config/store';
 import reportWebVitals from './reportWebVitals';
+import { applyIntlPolyfill, selectLocale } from './utils/helpers/selectLocale';
+import { parseMessages } from './utils/helpers/parseMessage';
+import { applicationMessages } from './config/messages';
+
+const { lang } = selectLocale();
+
+applyIntlPolyfill(lang)
+  .catch(e => console.error(e));
+
+  const intl = createIntl({
+    locale: lang,
+    messages: parseMessages(applicationMessages[lang]),
+  });
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

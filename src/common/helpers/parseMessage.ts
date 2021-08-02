@@ -1,4 +1,4 @@
-import { ParseMessage } from './../models/intlModels';
+import { ParseMessage } from '../models/intlModels';
 import { parse } from '@formatjs/icu-messageformat-parser';
 
 export const parseMessages: ParseMessage = (nestedMessages, prefix = '') =>

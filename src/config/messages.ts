@@ -1,5 +1,5 @@
-import { LANG } from '../utils/constants/locale';
-import { ApplicationMessages } from './../utils/models/intlModels';
+import { LANG } from '../common/constants/locale';
+import { ApplicationMessages } from '../common/models/intlModels';
 
 export const applicationMessages: ApplicationMessages = {
   [LANG.EN]: {},

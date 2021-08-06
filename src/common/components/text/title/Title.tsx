@@ -1,5 +1,5 @@
 import React from 'react';
-import { Titles } from '../../../model/tags';
+import { Titles } from '../../../models/tags';
 import style from './Title.module.css';
 
 interface Props {

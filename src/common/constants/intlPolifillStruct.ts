@@ -8,7 +8,7 @@ import { shouldPolyfill as isNumberFormat } from '@formatjs/intl-numberformat/sh
 import { shouldPolyfill as isPluralRules } from '@formatjs/intl-pluralrules/should-polyfill';
 import { shouldPolyfill as isRelativeTime } from '@formatjs/intl-relativetimeformat/should-polyfill';
 
-import { PolifillStruct } from '../model/intlModels';
+import { PolifillStruct } from '../models/intlModels';
 
 export const polifilStructList: PolifillStruct[] = [
   {

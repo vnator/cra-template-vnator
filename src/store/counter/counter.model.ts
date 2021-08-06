@@ -1,4 +1,4 @@
-import { DefaultActionReducer } from '../../common/model/commonReduxModels';
+import { DefaultActionReducer } from '../../common/models/commonReduxModels';
 
 export type CounterActions = 'increment' | 'decrement' | 'incrementByAmount';
 

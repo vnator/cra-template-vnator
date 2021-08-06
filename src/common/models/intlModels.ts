@@ -1,4 +1,4 @@
-import { LANG, CURRENCY } from '../constant/locale';
+import { LANG, CURRENCY } from '../constants/locale';
 
 export interface PolifillStruct {
   hasPolifill: boolean;

@@ -1,15 +1,11 @@
 import { LANG, CURRENCY } from '../constants/locale';
-
 import { langPath, polifilStructList } from '../constants/intlPolifillStruct';
 import { LocaleSelected } from '../models/intlModels';
 
 export function selectLocale(): LocaleSelected {
-  const browserLocale: string =
-    navigator.language || (navigator.languages && navigator.languages[0]);
+  const browserLocale: string = navigator.language || (navigator.languages && navigator.languages[0]);
 
-  const locale = Object.values(LANG).includes(browserLocale as LANG)
-    ? browserLocale
-    : LANG.PT;
+  const locale = Object.values(LANG).includes(browserLocale as LANG) ? browserLocale : LANG.PT;
 
   switch (locale) {
     case LANG.EN:
@@ -33,11 +29,10 @@ export async function applyIntlPolyfill(locale: LANG): Promise<void> {
     if (hasPolifill) continue;
 
     const importPaths = paths.map((path, index, arr) => {
-      if (arr.length > 1 && index === arr.length - 1) {
-        return import(`${path}/${langPath[locale]}`);
-      }
+      const checkIfLangPath = arr.length > 1 && index === arr.length - 1;
+      const pathToLang = `${path}/${langPath[locale]}`;
 
-      return import(path);
+      return Promise.resolve(checkIfLangPath ? pathToLang : path);
     });
 
     await Promise.all(importPaths);

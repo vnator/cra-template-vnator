@@ -21,31 +21,19 @@ export const polifilStructList: PolifillStruct[] = [
   },
   {
     hasPolifill: isDisplayNames(),
-    paths: [
-      '@formatjs/intl-datetimeformat/polyfill',
-      '@formatjs/intl-displaynames/locale-data',
-    ],
+    paths: ['@formatjs/intl-datetimeformat/polyfill', '@formatjs/intl-displaynames/locale-data'],
   },
   {
     hasPolifill: isListFormat(),
-    paths: [
-      '@formatjs/intl-locale/polyfill',
-      '@formatjs/intl-listformat/locale-data',
-    ],
+    paths: ['@formatjs/intl-locale/polyfill', '@formatjs/intl-listformat/locale-data'],
   },
   {
     hasPolifill: isPluralRules(),
-    paths: [
-      '@formatjs/intl-pluralrules/polyfill',
-      '@formatjs/intl-pluralrules/locale-data',
-    ],
+    paths: ['@formatjs/intl-pluralrules/polyfill', '@formatjs/intl-pluralrules/locale-data'],
   },
   {
     hasPolifill: isNumberFormat(),
-    paths: [
-      '@formatjs/intl-numberformat/polyfill',
-      '@formatjs/intl-numberformat/locale-data',
-    ],
+    paths: ['@formatjs/intl-numberformat/polyfill', '@formatjs/intl-numberformat/locale-data'],
   },
   {
     hasPolifill: isDateTime(),
@@ -57,10 +45,7 @@ export const polifilStructList: PolifillStruct[] = [
   },
   {
     hasPolifill: isRelativeTime(),
-    paths: [
-      '@formatjs/intl-relativetimeformat/polyfill',
-      '@formatjs/intl-relativetimeformat/locale-data',
-    ],
+    paths: ['@formatjs/intl-relativetimeformat/polyfill', '@formatjs/intl-relativetimeformat/locale-data'],
   },
 ];
 

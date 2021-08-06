@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { createIntl, RawIntlProvider } from 'react-intl';
 
 import './index.css';
-import { App } from './feature/app/App';
+import { App } from './features/app/App';
 import { store } from './config/store';
 import reportWebVitals from './reportWebVitals';
 import { applyIntlPolyfill, selectLocale } from './common/helpers/selectLocale';

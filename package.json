@@ -2,6 +2,16 @@
   "name": "vnator",
   "version": "0.1.0",
   "private": true,
+  "baseUrl": "./src",
+  "paths": {
+    "@component/*": ["common/component/*"],
+    "@constant/*": ["common/constant/*"],
+    "@helper/*": ["common/helper/*"],
+    "@hook/*": ["common/hook/*"],
+    "@model/*": ["common/model/*"],
+    "@store/*": ["store/*"],
+    "@feature/*": ["feature/*"]
+  },
   "dependencies": {
     "@formatjs/icu-messageformat-parser": "^2.0.8",
     "@formatjs/intl-datetimeformat": "^4.2.0",

@@ -1,6 +1,6 @@
-import { LANG, CURRENCY } from '../constants/locale';
-import { langPath, polifilStructList } from '../constants/intlPolifillStruct';
-import { LocaleSelected } from '../models/intlModels';
+import { LANG, CURRENCY } from '../constant/locale';
+import { langPath, polifilStructList } from '../constant/intlPolifillStruct';
+import { LocaleSelected } from '../model/intlModels';
 
 export function selectLocale(): LocaleSelected {
   const browserLocale: string = navigator.language || (navigator.languages && navigator.languages[0]);

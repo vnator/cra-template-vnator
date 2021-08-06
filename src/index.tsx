@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom';
 import { createIntl, RawIntlProvider } from 'react-intl';
 
 import './index.css';
-import { App } from './features/app/App';
+import { App } from './feature/app/App';
 import { store } from './config/store';
 import reportWebVitals from './reportWebVitals';
-import { applyIntlPolyfill, selectLocale } from './common/helpers/selectLocale';
-import { parseMessages } from './common/helpers/parseMessage';
+import { applyIntlPolyfill, selectLocale } from './common/helper/selectLocale';
+import { parseMessages } from './common/helper/parseMessage';
 import { applicationMessages } from './config/messages';
 
 const { lang } = selectLocale();
